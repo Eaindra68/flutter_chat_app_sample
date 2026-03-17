@@ -13,6 +13,11 @@ class ChatPage extends StatelessWidget {
   final ChatService _chatService = ChatService();
   final AuthService _authService = AuthService();
 
+  void logout() async {
+    final authService = AuthService();
+    authService.signOut();
+  }
+
   void sendMessage() async {
     if (_messageController.text.isNotEmpty) {
       await _chatService.sendMessage(recieverId, _messageController.text);
@@ -23,8 +28,15 @@ class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[200],
-      appBar: AppBar(title: Text(recieverEmail)),
+      appBar: AppBar(
+        title: Text(
+          "Chat with $recieverEmail",
+          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+        ),
+        actions: [
+          IconButton(onPressed: logout, icon: Icon(Icons.logout_sharp)),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -125,7 +137,7 @@ class ChatPage extends StatelessWidget {
       decoration: InputDecoration(
         filled: true,
         hintText: hintText,
-        fillColor: Colors.white,
+        fillColor: Colors.grey[200],
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
