@@ -25,10 +25,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[200],
       appBar: AppBar(
-        title: Text("Home"),
-        actions: [IconButton(onPressed: logout, icon: Icon(Icons.logout))],
+        title: Text(
+          "Home",
+          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+        ),
+        actions: [
+          IconButton(onPressed: logout, icon: Icon(Icons.logout_sharp)),
+        ],
       ),
       drawer: MyDrawer(),
       body: _builduserList(),
