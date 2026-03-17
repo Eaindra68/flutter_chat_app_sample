@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "790231778183",
+    "project_id": "chatappabc",
+    "storage_bucket": "chatappabc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790231778183:android:74b2251a5011901688c922",
+        "android_client_info": {
+          "package_name": "com.example.flutter_chat_app_sample"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGh-3C5Z4wLmiJ2jO_7uv5OhFrgxhzjPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
